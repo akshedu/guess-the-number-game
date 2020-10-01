@@ -10,6 +10,8 @@ public class NumberGeneratorImpl implements NumberGenerator{
 
     // fields
     private final Random random = new Random();
+
+    @Getter
     private final int maxNumber;
 
     @Getter
@@ -25,10 +27,5 @@ public class NumberGeneratorImpl implements NumberGenerator{
     @Override
     public int next() {
         return random.nextInt(maxNumber - minNumber) + minNumber;
-    }
-
-    @Override
-    public int getMaxNumber() {
-        return maxNumber;
     }
 }
